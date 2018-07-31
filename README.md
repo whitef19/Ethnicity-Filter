@@ -1,18 +1,10 @@
-# Pathogenic SNV filter for diagnostic
-# Filtering for SNV with ethnic group frequency as threshold with gnomAD frequency
 
-# Prediction of ethnic group of individual
-Bayesian naive classification of the seven gnomAD population class.
-AFR: African
-AMR: Admixed american
-ASJ: Askenazi Jewish
-EAS: East Asian
-FIN: Finnish
-NFE: Non-Finnish European
-SAS: South Asian
-Sum of frenquency log of each individual SNV
-
-# Filtering with appropriate gene threshold
-Set ethnic group threshold with most frequent pathogenic SNV for each gene. 
-The pathogenicity of SNV is given by Clinvar data base. 
-Add flag for SNV with global frequency greater than threshold for the SNV gene for the population of the invidual.
+# Ethnicity filter
+## About
+Prediction of the individual's ethnic group is made by naive Bayesian classification of variants among the seven classes of GnomAD [https://macarthurlab.org/2017/02/27/the-genome-aggregation-database-gnomad/].
+SNVs with population frequency greater than threshold for the gene of  SNV for the population of the invidual are annotated.
+## Installation
+```bash
+git clone URL
+python3 prediction.py
+```
